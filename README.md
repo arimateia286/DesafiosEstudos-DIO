@@ -1,3 +1,3 @@
-# ContaBanco
+# Desafios e estudos - DIO
 
-## Primeiro projeto para o desafio de estrutura de sintaxe Java do Bootcamp Santander na DIO.
+## Repositório dedicado aos desafios de código e estudos na DIO.
