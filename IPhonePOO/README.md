@@ -1,1 +1,28 @@
-# Vou já preencher esse README com o diagrama Mermaid pelo GitHub mesmo, porque o VS Code não suporta🤡
+# Diagrama UML
+```mermaid
+classDiagram
+    class ReprodutorMusical {
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
+
+    class AparelhoTelefonico {
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class NavegadorInternet {
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class IPhone {
+    }
+
+    IPhone --> ReprodutorMusical
+    IPhone --> AparelhoTelefonico
+    IPhone --> NavegadorInternet
+```
