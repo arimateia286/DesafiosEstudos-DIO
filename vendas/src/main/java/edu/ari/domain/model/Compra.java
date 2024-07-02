@@ -3,6 +3,7 @@ package edu.ari.domain.model;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity(name = "tab_compra")
 public class Compra {
@@ -17,6 +18,10 @@ public class Compra {
     private BigDecimal valor;
     @Column(nullable = false)
     private String status;
+    @Column(nullable = false)
+    private LocalDate dataCriacao;
+
+    private LocalDate dataPagamento = null;
 
     public long getClienteId() {
         return clienteId;
@@ -24,6 +29,22 @@ public class Compra {
 
     public void setClienteId(long clienteId) {
         this.clienteId = clienteId;
+    }
+
+    public LocalDate getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public void setDataCriacao(LocalDate dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public LocalDate getDataPagamento() {
+        return dataPagamento;
+    }
+
+    public void setDataPagamento(LocalDate dataPagamento) {
+        this.dataPagamento = dataPagamento;
     }
 
     public String getStatus() {

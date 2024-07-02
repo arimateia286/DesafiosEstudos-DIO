@@ -31,8 +31,9 @@ public class CompraController {
 
     @PutMapping("/{compraId}")
     @Operation(summary = "Alterar status", description = "Altera o status de uma compra para 'Pago' pelo seu ID")
-    public ResponseEntity<Compra> alterarStatus(@PathVariable long compraId) {
-        return ResponseEntity.ok(compraService.alterarStatus(compraId));
+    public ResponseEntity<Void> alterarStatus(@PathVariable long compraId) {
+        compraService.alterarStatus(compraId);
+        return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{compraId}")

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/clientes")
@@ -26,6 +27,12 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.buscarTodos());
     }
 
+    @GetMapping("/{clienteId}")
+    @Operation(summary = "Ver cliente", description = "Retorna um único cliente pelo seu ID")
+    public ResponseEntity<Optional<Cliente>> ver(@PathVariable long clienteId) {
+        return ResponseEntity.ok(clienteService.ver(clienteId));
+    }
+
     @PostMapping
     @Operation(summary = "Criar cliente", description = "Adiciona um novo cliente")
     public ResponseEntity<Cliente> criar(@RequestBody Cliente clienteParaCriar) {
@@ -38,7 +45,7 @@ public class ClienteController {
     }
 
     @DeleteMapping("/{clienteId}")
-    @Operation(summary = "Deletar cliente", description = "Deleta um cliente pelo seu ID")
+    @Operation(summary = "Deletar cliente", description = "Deleta um cliente e todas as suas compras pelo seu ID")
     public ResponseEntity<Void> deletarPorId(@PathVariable long clienteId) {
         clienteService.deletarPorId(clienteId);
         return ResponseEntity.noContent().build();

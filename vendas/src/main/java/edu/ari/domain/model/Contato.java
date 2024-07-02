@@ -2,7 +2,7 @@ package edu.ari.domain.model;
 
 import jakarta.persistence.*;
 
-@Entity(name = "tab_contatos")
+@Entity(name = "tab_contato")
 public class Contato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

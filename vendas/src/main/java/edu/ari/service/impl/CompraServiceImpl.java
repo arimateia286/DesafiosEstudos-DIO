@@ -6,6 +6,9 @@ import edu.ari.domain.repository.CompraRepository;
 import edu.ari.service.CompraService;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.NoSuchElementException;
+
 @Service
 public class CompraServiceImpl implements CompraService {
 
@@ -20,23 +23,26 @@ public class CompraServiceImpl implements CompraService {
     @Override
     public void adicionar(Compra compra) {
         if (clienteRepository.existsById(compra.getClienteId())) {
+            compra.setDataCriacao(LocalDate.now());
             compra.setStatus("Não pago");
             compraRepository.save(compra);
         } else {
-            throw  new IllegalArgumentException();
+            throw new NoSuchElementException();
         }
     }
 
     @Override
     public void deletarPorId(long compraId) {
-        compraRepository.deleteById(compraId);
+        var compraParaDeletar = compraRepository.findById(compraId).orElseThrow(NoSuchElementException::new);
+        compraRepository.delete(compraParaDeletar);
     }
 
     @Override
-    public Compra alterarStatus(long compraId) {
-        var compraParaAlterar = compraRepository.findById(compraId).get();
+    public void alterarStatus(long compraId) {
+        var compraParaAlterar = compraRepository.findById(compraId).orElseThrow(NoSuchElementException::new);
+        compraParaAlterar.setDataPagamento(LocalDate.now());
         compraParaAlterar.setStatus("Pago");
-        return compraRepository.save(compraParaAlterar);
+        compraRepository.save(compraParaAlterar);
     }
 
     @Override

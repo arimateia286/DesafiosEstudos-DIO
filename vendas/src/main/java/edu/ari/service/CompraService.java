@@ -7,7 +7,7 @@ public interface CompraService {
 
     void deletarPorId(long compraId);
 
-    Compra alterarStatus(long compraId);
+    void alterarStatus(long compraId);
 
     Iterable<Compra> verTodasPorCliente(long clienteId);
 
