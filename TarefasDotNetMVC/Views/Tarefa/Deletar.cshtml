@@ -8,22 +8,33 @@
 
 <hr />
 
-<h1 style="color: red;">Deseja mesmo deletar essa tarefa?<br>(Essa operação é irreversível!)</h1>
+<h2 style="color: red;">Deseja mesmo deletar essa tarefa?<br>(Essa operação é irreversível!)</h2>
 
 <div class="card">
     <div class="card-body">
-        <dl class="row">
-            <dt class="col-sm-3">Título</dt>
-            <dd class="col-sm-9">@Model.Titulo</dd>
+        <div class="mb-3">
+            <label class="form-label fw-bold">Título</label>
+            <div>@Model.Titulo</div>
+        </div>
 
-            <dt class="col-sm-3">Descrição</dt>
-            <dd class="col-sm-9">@Model.Descricao</dd>
+        <div class="mb-3">
+            <label class="form-label fw-bold">Descrição</label>
+            <div>@Html.Raw(Model.Descricao.Replace("\n", "<br />"))</div>
+        </div>
 
-            <dt class="col-sm-3">Data de Criação</dt>
-            <dd class="col-sm-9">@Model.DataCriacao.ToString("dd/MM/yyyy HH:mm")</dd>
+        <div class="mb-3">
+            <label class="form-label fw-bold">Data de Criação</label>
+            <div>@Model.DataCriacao.ToString("dd/MM/yyyy HH:mm")</div>
+        </div>
 
-            <dt class="col-sm-3">Data de Finalização</dt>
-            <dd class="col-sm-9">
+        <div class="mb-3">
+            <label class="form-label fw-bold">Status</label>
+            <div>@Model.Status.ToString()</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold">Data de Finalização</label>
+            <div>
                 @if (Model.DataFinalizacao.HasValue)
                 {
                     @Model.DataFinalizacao.Value.ToString("dd/MM/yyyy HH:mm")
@@ -32,11 +43,8 @@
                 {
                     <span class="text-muted">Não finalizada</span>
                 }
-            </dd>
-
-            <dt class="col-sm-3">Status</dt>
-            <dd class="col-sm-9">@Model.Status.ToString()</dd>
-        </dl>
+            </div>
+        </div>
     </div>
 </div>
 

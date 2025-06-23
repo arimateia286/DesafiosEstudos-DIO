@@ -16,59 +16,69 @@
 }
 
 <h2>@ViewData["Title"]</h2>
-<hr/>
-<p>
-    <a asp-action="Criar"><input type="button" value="Adicionar Tarefa" class="btn btn-primary"/></a>
-</p>
+<hr />
 
-<table class="table border-bottom border-top">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataCriacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataFinalizacao)
-            </th>
-            <th class="text-center">
-                Ações
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+@if (!Model.Any())
+{
+    <div class="alert alert-info text-center">
+        Sem tarefas no momento, adiciona uma aí!
+        <a asp-action="Criar"><input type="button" value="Adicionar Tarefa" class="btn btn-primary" /></a>
+    </div>
+}
+else
+{
+    <p>
+        <a asp-action="Criar"><input type="button" value="Adicionar Tarefa" class="btn btn-primary" /></a>
+    </p>
+    <table class="table table-bordered">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(model => item.Titulo)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => item.Descricao)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => item.DataCriacao)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => item.Status)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => item.DataFinalizacao)
-                </td>
-                <td class="text-center">
-                    <a asp-action="Editar" asp-route-id="@item.Id"><i class="fa-solid fa-pen"></i></a> |
-                    <a asp-action="Detalhes" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a> |
-                    <a asp-action="Deletar" asp-route-id="@item.Id"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Titulo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataCriacao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataFinalizacao)
+                </th>
+                <th class="text-center" style="width: 150px;">Ações</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => item.Titulo)
+                    </td>
+                    <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px;">
+                        @Html.DisplayFor(model => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.DataCriacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.DataFinalizacao)
+                    </td>
+                    <td class="text-center">
+                        <a asp-action="Editar" asp-route-id="@item.Id"><i class="fa-solid fa-pen"></i></a> |
+                        <a asp-action="Detalhes" asp-route-id="@item.Id" class="text-info"><i
+                                class="fa-solid fa-circle-info"></i></a> |
+                        <a asp-action="Deletar" asp-route-id="@item.Id" class="text-danger"><i
+                                class="fa-solid fa-trash-can"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

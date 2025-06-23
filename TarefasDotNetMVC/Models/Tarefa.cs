@@ -14,7 +14,10 @@ namespace TarefasDotNetMVC.Models
         [Display(Name = "Descrição")]
         public string Descricao { get; set; }
         
+        [Display(Name = "Data de Criação")]
         public DateTime DataCriacao { get; set; }
+
+        [Display(Name = "Data de Finalização")]
         public DateTime? DataFinalizacao { get; set; }
         
         [Required(ErrorMessage = "O status é obrigatório.")]
