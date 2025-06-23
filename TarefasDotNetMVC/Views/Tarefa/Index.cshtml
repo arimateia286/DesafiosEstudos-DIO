@@ -1,0 +1,74 @@
+@model IEnumerable<TarefasDotNetMVC.Models.Tarefa>
+
+@{
+    ViewData["Title"] = "Tarefas";
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            var mensagem = '@TempData["MensagemSucesso"]';
+            if (mensagem) {
+                alert(mensagem);
+            }
+        });
+    </script>
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr/>
+<p>
+    <a asp-action="Criar"><input type="button" value="Adicionar Tarefa" class="btn btn-primary"/></a>
+</p>
+
+<table class="table border-bottom border-top">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataCriacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataFinalizacao)
+            </th>
+            <th class="text-center">
+                Ações
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.DataCriacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.DataFinalizacao)
+                </td>
+                <td class="text-center">
+                    <a asp-action="Editar" asp-route-id="@item.Id"><i class="fa-solid fa-pen"></i></a> |
+                    <a asp-action="Detalhes" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a> |
+                    <a asp-action="Deletar" asp-route-id="@item.Id"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

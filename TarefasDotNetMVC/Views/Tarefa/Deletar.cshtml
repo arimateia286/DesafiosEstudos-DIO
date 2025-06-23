@@ -1,0 +1,52 @@
+@model TarefasDotNetMVC.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Deletar Tarefa";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<hr />
+
+<h1 style="color: red;">Deseja mesmo deletar essa tarefa?<br>(Essa operação é irreversível!)</h1>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Título</dt>
+            <dd class="col-sm-9">@Model.Titulo</dd>
+
+            <dt class="col-sm-3">Descrição</dt>
+            <dd class="col-sm-9">@Model.Descricao</dd>
+
+            <dt class="col-sm-3">Data de Criação</dt>
+            <dd class="col-sm-9">@Model.DataCriacao.ToString("dd/MM/yyyy HH:mm")</dd>
+
+            <dt class="col-sm-3">Data de Finalização</dt>
+            <dd class="col-sm-9">
+                @if (Model.DataFinalizacao.HasValue)
+                {
+                    @Model.DataFinalizacao.Value.ToString("dd/MM/yyyy HH:mm")
+                }
+                else
+                {
+                    <span class="text-muted">Não finalizada</span>
+                }
+            </dd>
+
+            <dt class="col-sm-3">Status</dt>
+            <dd class="col-sm-9">@Model.Status.ToString()</dd>
+        </dl>
+    </div>
+</div>
+
+<br>
+
+<form asp-action="Deletar">
+    <input asp-for="Id" type="hidden" />
+    <input type="submit" value="Deletar" class="btn btn-danger"></a>
+</form>
+
+<hr />
+
+<a asp-action="Index" class="btn btn-secondary">Voltar</a>
