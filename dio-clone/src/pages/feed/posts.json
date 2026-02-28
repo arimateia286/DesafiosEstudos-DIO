@@ -1,0 +1,132 @@
+[
+    {
+        "user": {
+            "name": "Ana Silva",
+            "picture": "https://ui-avatars.com/api/?name=A&background=random"
+        },
+        "post": {
+            "title": "Dominando a Context API do React",
+            "content": "A Context API é uma forma poderosa de gerenciar estados globais sem o famoso prop drilling. Ideal para temas, autenticação e configurações de idioma em apps de médio porte.",
+            "tags": "#React #Frontend #WebDev",
+            "date": "16/02/2026 09:15",
+            "banner": "https://placehold.co/600x180?text=React+Context+API"
+        }
+    },
+    {
+        "user": {
+            "name": "Bruno Costa",
+            "picture": "https://ui-avatars.com/api/?name=B&background=random"
+        },
+        "post": {
+            "title": "Docker: O guia definitivo para iniciantes",
+            "content": "Aprenda como a conteinerização facilita o deploy e a padronização do ambiente de desenvolvimento entre todo o time de engenharia de forma eficiente.",
+            "tags": "#Docker #DevOps #Infrastructure",
+            "date": "16/02/2026 09:30",
+            "banner": "https://placehold.co/600x180?text=Docker+Guide"
+        }
+    },
+    {
+        "user": {
+            "name": "Carla Souza",
+            "picture": "https://ui-avatars.com/api/?name=C&background=random"
+        },
+        "post": {
+            "title": "Primeiros passos com Pandas no Python",
+            "content": "Manipular grandes volumes de dados nunca foi tão simples. O Pandas é a biblioteca essencial para qualquer aspirante a cientista de dados no ecossistema Python.",
+            "tags": "#Python #DataScience #BigData",
+            "date": "16/02/2026 10:05",
+            "banner": "https://placehold.co/600x180?text=Python+Pandas"
+        }
+    },
+    {
+        "user": {
+            "name": "Diego Fernandes",
+            "picture": "https://ui-avatars.com/api/?name=D&background=random"
+        },
+        "post": {
+            "title": "Tipagem Estática: Vale a pena usar TypeScript?",
+            "content": "A segurança que o TypeScript traz para o código evita erros bobos em tempo de execução e melhora drasticamente o autocomplete e a manutenção da IDE.",
+            "tags": "#TypeScript #JavaScript #Programacao",
+            "date": "16/02/2026 10:45",
+            "banner": "https://placehold.co/600x180?text=TypeScript+Tips"
+        }
+    },
+    {
+        "user": {
+            "name": "Elena Martins",
+            "picture": "https://ui-avatars.com/api/?name=E&background=random"
+        },
+        "post": {
+            "title": "Subgrid e o futuro do Layout com CSS Grid",
+            "content": "O CSS Grid evoluiu! O Subgrid permite que elementos filhos se alinhem à grade do pai, resolvendo problemas complexos de design responsivo e alinhamento.",
+            "tags": "#CSS #WebDesign #Frontend",
+            "date": "16/02/2026 11:20",
+            "banner": "https://placehold.co/600x180?text=CSS+Subgrid"
+        }
+    },
+    {
+        "user": {
+            "name": "Felipe Rocha",
+            "picture": "https://ui-avatars.com/api/?name=F&background=random"
+        },
+        "post": {
+            "title": "Boas práticas de segurança em APIs REST",
+            "content": "JWT, OAuth2 e Rate Limiting. Proteja seu backend contra os ataques mais comuns da OWASP e garanta a integridade dos dados dos seus usuários.",
+            "tags": "#Backend #Cybersecurity #API",
+            "date": "16/02/2026 12:10",
+            "banner": "https://placehold.co/600x180?text=API+Security"
+        }
+    },
+    {
+        "user": {
+            "name": "Gabriela Lima",
+            "picture": "https://ui-avatars.com/api/?name=G&background=random"
+        },
+        "post": {
+            "title": "Git Flow vs GitHub Flow: Qual escolher?",
+            "content": "A escolha do fluxo de trabalho impacta diretamente na velocidade de entrega do time. Entenda as diferenças entre branches de feature e ambientes de release.",
+            "tags": "#Git #GitHub #Agile",
+            "date": "16/02/2026 13:40",
+            "banner": "https://placehold.co/600x180?text=Git+Workflows"
+        }
+    },
+    {
+        "user": {
+            "name": "Hugo Mendes",
+            "picture": "https://ui-avatars.com/api/?name=H&background=random"
+        },
+        "post": {
+            "title": "Integrando LLMs em aplicações Node.js",
+            "content": "Como utilizar APIs de modelos de linguagem para criar chatbots inteligentes e automações de texto personalizadas dentro da sua infraestrutura atual.",
+            "tags": "#AI #Nodejs #LLM",
+            "date": "16/02/2026 14:15",
+            "banner": "https://placehold.co/600x180?text=AI+and+Nodejs"
+        }
+    },
+    {
+        "user": {
+            "name": "Isabela Santos",
+            "picture": "https://ui-avatars.com/api/?name=I&background=random"
+        },
+        "post": {
+            "title": "PostgreSQL: Otimizando queries com Índices",
+            "content": "Sua aplicação está lenta? Talvez falte um índice bem planejado. Veja como o EXPLAIN ANALYZE ajuda a identificar gargalos no seu banco de dados.",
+            "tags": "#SQL #PostgreSQL #Database",
+            "date": "16/02/2026 15:50",
+            "banner": "https://placehold.co/600x180?text=PostgreSQL+Index"
+        }
+    },
+    {
+        "user": {
+            "name": "João Pereira",
+            "picture": "https://ui-avatars.com/api/?name=J&background=random"
+        },
+        "post": {
+            "title": "Flutter: O que esperar das próximas atualizações",
+            "content": "Performance nativa em todas as telas. Analisamos as mudanças no motor gráfico Impeller e o suporte aprimorado para aplicações Desktop e Web.",
+            "tags": "#Flutter #Dart #Mobile",
+            "date": "16/02/2026 16:30",
+            "banner": "https://placehold.co/600x180?text=Flutter+Future"
+        }
+    }
+]

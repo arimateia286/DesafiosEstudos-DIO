@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Ana Silva",
+        "picture": "https://ui-avatars.com/api/?name=A&background=random",
+        "obtainedXp": 2300,
+        "necessaryXp": 2300,
+        "position": 1
+    },
+    {
+        "name": "Bruno Costa",
+        "picture": "https://ui-avatars.com/api/?name=B&background=random",
+        "obtainedXp": 1900,
+        "necessaryXp": 2300,
+        "position": 2
+    },
+    {
+        "name": "Carla Souza",
+        "picture": "https://ui-avatars.com/api/?name=C&background=random",
+        "obtainedXp": 1450,
+        "necessaryXp": 2300,
+        "position": 3
+    },
+    {
+        "name": "Diego Fernandes",
+        "picture": "https://ui-avatars.com/api/?name=D&background=random",
+        "obtainedXp": 1300,
+        "necessaryXp": 2300,
+        "position": 4
+    },
+    {
+        "name": "Elena Martins",
+        "picture": "https://ui-avatars.com/api/?name=E&background=random",
+        "obtainedXp": 1200,
+        "necessaryXp": 2300,
+        "position": 5
+    }
+]

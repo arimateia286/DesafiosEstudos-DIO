@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Zé da Manga",
+      "email": "zedamanga@gmail.com",
+      "password": "senha1234"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "password": "password456"
+    },
+    {
+      "id": "d5d0",
+      "password": "87654321",
+      "email": "blablabla@gmail.com",
+      "name": "Ari"
+    }
+  ]
+}
