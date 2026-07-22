@@ -1,0 +1,10 @@
+<article class="group flex flex-row gap-4 font-semibold cursor-pointer items-start" [routerLink]="['/news', news().id]">
+  <div class="w-[40%] shrink-0 aspect-3/2 overflow-hidden bg-zinc-900">
+    <img class="w-full h-full object-cover" [src]="news().coverUrl" [alt]="news().title" loading="lazy">
+  </div>
+  <div class="flex flex-col gap-1.5 min-w-0">
+    <span class="text-zinc-500 text-xs uppercase tracking-wider">{{ news().date }}</span>
+    <h3 class="text-zinc-100 text-xl line-clamp-3 leading-snug group-hover:text-zinc-300 transition-colors">
+      {{ news().title }}</h3>
+  </div>
+</article>
