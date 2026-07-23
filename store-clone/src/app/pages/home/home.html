@@ -1,0 +1,7 @@
+<section class="pt-[10vh] min-h-[92vh] w-full px-3 py-8 sm:px-6 lg:px-10">
+  <div class="mx-auto grid w-full max-w-7xl grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:gap-8">
+    @for (game of games; track game.id) {
+    <app-card [game]="game" />
+    }
+  </div>
+</section>
